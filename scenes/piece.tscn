@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://rghw7gvjn0oo"]
+
+[ext_resource type="Script" uid="uid://bw1bgr410qpu4" path="res://scripts/game.gd" id="1_s58gp"]
+[ext_resource type="Script" uid="uid://t1wbpjpt1vl1" path="res://scripts/InputHandler.gd" id="2_h2rng"]
+[ext_resource type="Script" uid="uid://bwvcg4e2y5627" path="res://scripts/test.gd" id="3_h2rng"]
+[ext_resource type="PackedScene" uid="uid://d077sxsbsylbm" path="res://models/pieces/BishopB.glb" id="4_m0mde"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ChessGame" type="Node3D" parent="."]
+script = ExtResource("1_s58gp")
+metadata/_custom_type_script = "uid://bw1bgr410qpu4"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.507538, 0.861629, 0, -0.861629, 0.507538, 0, 2.37, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.98035, -0.197264, 0, 0.197264, 0.98035, -2.55665, 2.89143, 4.7355)
+fov = 179.0
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("2_h2rng")
+
+[node name="Node3D2" type="Node3D" parent="."]
+script = ExtResource("3_h2rng")
+
+[node name="BishopB2" parent="." instance=ExtResource("4_m0mde")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0512102, 0, -0.0270505)

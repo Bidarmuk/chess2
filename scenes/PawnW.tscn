@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b05eytvaaw0lk"]
+
+[ext_resource type="PackedScene" uid="uid://d1tdo8df0tb2c" path="res://models/pieces/PawnW.glb" id="1_qobc6"]
+
+[node name="PawnW" type="Node3D"]
+
+[node name="PieceRoot" type="Node3D" parent="."]
+
+[node name="PawnW" parent="PieceRoot" instance=ExtResource("1_qobc6")]
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="PieceRoot/PawnW"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PieceRoot/PawnW/GPUParticlesCollisionBox3D"]

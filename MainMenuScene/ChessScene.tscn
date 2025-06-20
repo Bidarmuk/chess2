@@ -1,0 +1,127 @@
+[gd_scene load_steps=14 format=3 uid="uid://bfmoqs8sob4mb"]
+
+[ext_resource type="PackedScene" uid="uid://co3wwtxj42xgr" path="res://models/Chessboard2.glb" id="1_mufm6"]
+[ext_resource type="PackedScene" uid="uid://dnsraer1bhu54" path="res://models/pieces/BishopW.glb" id="2_tksmr"]
+[ext_resource type="PackedScene" uid="uid://b4q1kytmc44fw" path="res://models/pieces/KingB.glb" id="3_5g5y4"]
+[ext_resource type="PackedScene" uid="uid://dnfcyquvt1s22" path="res://models/pieces/KingW.glb" id="4_wot45"]
+[ext_resource type="PackedScene" uid="uid://bdvv2evoehnot" path="res://models/pieces/KnightB.glb" id="5_3s51l"]
+[ext_resource type="PackedScene" uid="uid://mbowpa2587p5" path="res://models/pieces/KnightW.glb" id="6_2r6q8"]
+[ext_resource type="PackedScene" uid="uid://0li61ym482ml" path="res://models/pieces/PawnB.glb" id="7_ou6hq"]
+[ext_resource type="PackedScene" uid="uid://d1tdo8df0tb2c" path="res://models/pieces/PawnW.glb" id="8_4wy50"]
+[ext_resource type="PackedScene" uid="uid://be7hcnecyhidb" path="res://models/pieces/QueenB.glb" id="9_xehch"]
+[ext_resource type="PackedScene" uid="uid://dq02jfogdkwgr" path="res://models/pieces/QueenW.glb" id="10_4g4rw"]
+[ext_resource type="PackedScene" uid="uid://b4q1s6i2mey4k" path="res://models/pieces/RookB.glb" id="11_oo2ev"]
+[ext_resource type="PackedScene" uid="uid://dknb63ogjmvjs" path="res://models/pieces/RookW.glb" id="12_4mlgj"]
+[ext_resource type="PackedScene" uid="uid://d077sxsbsylbm" path="res://models/pieces/BishopB.glb" id="13_apcis"]
+
+[node name="ChessScene" type="Node3D"]
+
+[node name="Chessboard2" parent="." instance=ExtResource("1_mufm6")]
+
+[node name="BishopW" parent="." instance=ExtResource("2_tksmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1589, 0.226965, -0.326999)
+
+[node name="BishopW2" parent="." instance=ExtResource("2_tksmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.05)
+
+[node name="KingB2" parent="." instance=ExtResource("3_5g5y4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -14)
+
+[node name="KingW" parent="." instance=ExtResource("4_wot45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="KnightB" parent="." instance=ExtResource("5_3s51l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14)
+
+[node name="KnightB2" parent="." instance=ExtResource("5_3s51l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -14)
+
+[node name="KnightW" parent="." instance=ExtResource("6_2r6q8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="KnightW2" parent="." instance=ExtResource("6_2r6q8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="PawnB2" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="PawnB3" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+
+[node name="PawnB4" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -12)
+
+[node name="PawnB5" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
+
+[node name="PawnB6" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -12)
+
+[node name="PawnB7" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -12)
+
+[node name="PawnB8" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -12)
+
+[node name="PawnB9" parent="." instance=ExtResource("7_ou6hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -12)
+
+[node name="PawnW" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="PawnW2" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="PawnW3" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="PawnW4" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="PawnW5" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="PawnW6" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
+
+[node name="PawnW7" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2)
+
+[node name="PawnW8" parent="." instance=ExtResource("8_4wy50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -2)
+
+[node name="QueenB2" parent="." instance=ExtResource("9_xehch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -14)
+
+[node name="QueenW" parent="." instance=ExtResource("10_4g4rw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="RookB2" parent="." instance=ExtResource("11_oo2ev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+
+[node name="RookB3" parent="." instance=ExtResource("11_oo2ev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -14)
+
+[node name="RookW" parent="." instance=ExtResource("12_4mlgj")]
+
+[node name="RookW2" parent="." instance=ExtResource("12_4mlgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="BishopB2" parent="." instance=ExtResource("13_apcis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -14)
+
+[node name="BishopB3" parent="." instance=ExtResource("13_apcis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -14)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7, 15.8685, -7)
+light_energy = 8.594
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.131
+shadow_normal_bias = 4.803
+spot_range = 42.176
+spot_angle = 46.8

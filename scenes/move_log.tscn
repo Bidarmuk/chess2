@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cyyp2wd1kmiud"]
+
+[node name="MoveLog" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 23.0
+scale = Vector2(1.2508, 1)
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 114.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="white_moves" type="VBoxContainer" parent="Panel/GridContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="black_moves" type="VBoxContainer" parent="Panel/GridContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 1.0
+offset_right = 408.0
+offset_bottom = 32.0
+scale = Vector2(0.679999, 0.839999)
+text = "Скрыть историю ходов"

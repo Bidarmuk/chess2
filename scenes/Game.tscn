@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhb0ib1n84bt1"]
+
+[ext_resource type="Script" uid="uid://bw1bgr410qpu4" path="res://scripts/game.gd" id="1_ibkli"]
+[ext_resource type="Script" uid="uid://df8nnoi7wt10u" path="res://scripts/camera_3d.gd" id="2_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://cyyp2wd1kmiud" path="res://scenes/move_log.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://c3ibitns8lcnn" path="res://scenes/PromotionMenu.tscn" id="4_78awf"]
+[ext_resource type="Texture2D" uid="uid://d0vho3fr4q8ig" path="res://assets/refresh-button.png" id="5_s0nni"]
+[ext_resource type="Texture2D" uid="uid://75vhi4ithh48" path="res://assets/home.png" id="6_kiw3p"]
+[ext_resource type="Texture2D" uid="uid://csrfthl4mj5bh" path="res://assets/exit.png" id="7_400sg"]
+[ext_resource type="Texture2D" uid="uid://dj86xgy52ydvr" path="res://assets/black_wins.png" id="8_400sg"]
+[ext_resource type="PackedScene" uid="uid://q3iu8uormp6p" path="res://models/table_wood.glb" id="9_g4kob"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("1_ibkli")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.00269794, 3.99884, -0.0981039)
+fov = 90.3
+script = ExtResource("2_qbsmt")
+
+[node name="MoveLog" parent="Node3D" instance=ExtResource("3_cpr0p")]
+
+[node name="PromotionMenu" parent="Node3D" instance=ExtResource("4_78awf")]
+
+[node name="CameraPositionWhite" type="Node3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 7, 13, 2)
+
+[node name="CameraPositionBlack" type="Node3D" parent="Node3D"]
+transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 7, 13, -16)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node3D"]
+
+[node name="Control" type="Control" parent="Node3D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AutoCameraToggle" type="CheckBox" parent="Node3D/CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 23.0
+offset_right = 470.0
+offset_bottom = 54.0
+scale = Vector2(0.7019, 0.827723)
+button_pressed = true
+text = "Переключение камеры"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Node3D"]
+
+[node name="GameOverPanel" type="Panel" parent="Node3D/CanvasLayer2"]
+visible = false
+offset_left = 280.0
+offset_top = 64.0
+offset_right = 320.0
+offset_bottom = 104.0
+scale = Vector2(14.3407, 11.2324)
+
+[node name="TitleLabel" type="Label" parent="Node3D/CanvasLayer2/GameOverPanel"]
+layout_mode = 0
+offset_left = 0.557855
+offset_right = 189.558
+offset_bottom = 23.0
+scale = Vector2(0.197932, 0.301487)
+
+[node name="RestartButton" type="Button" parent="Node3D/CanvasLayer2/GameOverPanel"]
+layout_mode = 0
+offset_left = 5.02069
+offset_top = 26.6809
+offset_right = 525.021
+offset_bottom = 546.681
+scale = Vector2(0.012, 0.017)
+icon = ExtResource("5_s0nni")
+
+[node name="MenuButton" type="Button" parent="Node3D/CanvasLayer2/GameOverPanel"]
+layout_mode = 0
+offset_left = 17.25
+offset_top = 26.577
+offset_right = 537.25
+offset_bottom = 546.577
+scale = Vector2(0.0115936, 0.0169904)
+icon = ExtResource("6_kiw3p")
+
+[node name="QuitButton" type="Button" parent="Node3D/CanvasLayer2/GameOverPanel"]
+layout_mode = 0
+offset_left = 29.0084
+offset_top = 27.4076
+offset_right = 549.008
+offset_bottom = 547.408
+scale = Vector2(0.012, 0.017)
+icon = ExtResource("7_400sg")
+
+[node name="VictoryImage" type="TextureRect" parent="Node3D/CanvasLayer2/GameOverPanel"]
+layout_mode = 0
+offset_left = 10.5992
+offset_top = 7.12227
+offset_right = 1034.6
+offset_bottom = 1031.12
+scale = Vector2(0.0184853, 0.0184853)
+texture = ExtResource("8_400sg")
+
+[node name="table_wood" parent="Node3D/CanvasLayer2" instance=ExtResource("9_g4kob")]
+transform = Transform3D(32.5637, 0, 0, 0, 0.00720087, 0, 0, 0, 79.2896, 2, -0.8, 2)
+
+[node name="Button" type="Button" parent="Node3D"]
+offset_left = 24.0
+offset_top = 608.0
+offset_right = 125.0
+offset_bottom = 639.0
+text = "Обратн ход"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7, 15.8685, -7)
+light_energy = 10.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.131
+shadow_normal_bias = 4.803
+spot_range = 42.176
+spot_angle = 46.8

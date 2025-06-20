@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqjtbotj2u6wy"]
+
+[ext_resource type="Script" uid="uid://dprp62shnb5t7" path="res://MainMenuScene/MainMenu.gd" id="1_yqorp"]
+[ext_resource type="StyleBox" uid="uid://diwn5fa52akun" path="res://assets/new_style_box_hover.tres" id="2_7etpc"]
+[ext_resource type="StyleBox" uid="uid://bfy1to6reb6q8" path="res://assets/new_style_box_normal.tres" id="3_wpbah"]
+[ext_resource type="Texture2D" uid="uid://dy30ikvtch3dk" path="res://assets/Foxcroft NF Regular 400 (4).png" id="4_wpbah"]
+[ext_resource type="Texture2D" uid="uid://cpreijuckmw5h" path="res://assets/изображение_2025-05-15_031814354.png" id="5_tip1o"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqorp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 355.0
+offset_right = 249.0
+offset_bottom = 513.0
+theme_override_constants/separation = 28
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.402402, 0.315295, 0.215993, 1)
+theme_override_colors/font_color = Color(0.227451, 0.172549, 0.109804, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_7etpc")
+theme_override_styles/normal = ExtResource("3_wpbah")
+text = "Играть"
+
+[node name="ShareGit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.402402, 0.315295, 0.215993, 1)
+theme_override_colors/font_color = Color(0.227451, 0.172549, 0.109804, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_7etpc")
+theme_override_styles/normal = ExtResource("3_wpbah")
+text = "Поделиться"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.402402, 0.315295, 0.215993, 1)
+theme_override_colors/font_color = Color(0.227451, 0.172549, 0.109804, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_7etpc")
+theme_override_styles/normal = ExtResource("3_wpbah")
+text = "Выйти"
+
+[node name="Logo" type="TextureRect" parent="."]
+modulate = Color(0.462291, 0.462291, 0.462291, 1)
+layout_mode = 1
+offset_left = 285.0
+offset_top = 32.0
+offset_right = 1824.0
+offset_bottom = 193.0
+texture = ExtResource("4_wpbah")
+stretch_mode = 5
+
+[node name="LogoHorse" type="TextureRect" parent="."]
+modulate = Color(0.197937, 0.197937, 0.197937, 1)
+layout_mode = 0
+offset_left = 89.0
+offset_top = 105.0
+offset_right = 357.0
+offset_bottom = 435.0
+scale = Vector2(0.727053, 0.743611)
+texture = ExtResource("5_tip1o")
+
+[node name="popup" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 543.0
+offset_right = 170.0
+offset_bottom = 543.0
+scale = Vector2(1.95366, 3.56045)
+
+[node name="popup" type="Label" parent="popup"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.176502, 0.0814651, 0.0555216, 1)
+theme_override_colors/font_shadow_color = Color(0.427493, 0.427493, 0.427493, 1)
+text = "Ссылка скопирована в буфер обмена"
+
+[node name="HideTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

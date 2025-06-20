@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3ibitns8lcnn"]
+
+[ext_resource type="Script" uid="uid://cfyaf4qagtj7v" path="res://scenes/promotion_menu.gd" id="1_ttcyj"]
+[ext_resource type="Texture2D" uid="uid://swvtd1j5hg7p" path="res://assets/noun-1341513.png" id="2_6vntf"]
+[ext_resource type="Texture2D" uid="uid://hf64rcnaqlks" path="res://assets/noun-1341515.png" id="3_heybl"]
+[ext_resource type="Texture2D" uid="uid://cg7cuu6m0iwya" path="res://assets/noun-2375077.png" id="4_ykn5i"]
+[ext_resource type="Texture2D" uid="uid://c47jy2ni8auy8" path="res://assets/noun-2440257.png" id="5_qepfb"]
+
+[node name="PromotionMenu" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_ttcyj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 35.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = 432.0
+offset_top = 264.0
+offset_right = 602.0
+offset_bottom = 287.0
+scale = Vector2(1.2, 1.4)
+text = "Во что бы повыcить?"
+
+[node name="ColorRect" type="ColorRect" parent="Control/Label"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -110.0
+offset_top = -7.85715
+offset_right = -70.0
+offset_bottom = 32.1429
+scale = Vector2(9.99409, 3.50618)
+color = Color(0.366595, 0.366595, 0.366595, 1)
+
+[node name="Queen" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 328.0
+offset_top = 384.0
+offset_right = 387.0
+offset_bottom = 415.0
+text = "Ферзь"
+
+[node name="Rook" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 506.0
+offset_bottom = 415.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Ладья"
+
+[node name="Bishop" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 576.0
+offset_top = 384.0
+offset_right = 625.0
+offset_bottom = 415.0
+text = "Слон"
+
+[node name="Knight" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 696.0
+offset_top = 384.0
+offset_right = 745.0
+offset_bottom = 415.0
+text = "Конь"
+
+[node name="Noun-1341513" type="Sprite2D" parent="Control"]
+position = Vector2(600, 352)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_6vntf")
+
+[node name="Noun-1341515" type="Sprite2D" parent="Control"]
+position = Vector2(357, 353)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_heybl")
+
+[node name="Noun-2375077" type="Sprite2D" parent="Control"]
+position = Vector2(720, 352)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_ykn5i")
+
+[node name="Noun-2440257" type="Sprite2D" parent="Control"]
+position = Vector2(478, 354)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_qepfb")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd0d4i2b4hktc"]
+
+[ext_resource type="Script" uid="uid://b8kats5rri7kj" path="res://MainMenuScene/MainMenuScene.gd" id="1_ggn0m"]
+[ext_resource type="PackedScene" uid="uid://dqjtbotj2u6wy" path="res://MainMenuScene/MainMenu.tscn" id="1_wvhqm"]
+[ext_resource type="PackedScene" uid="uid://bfmoqs8sob4mb" path="res://MainMenuScene/ChessScene.tscn" id="2_ggn0m"]
+[ext_resource type="Script" uid="uid://74dog6imwevv" path="res://MainMenuScene/rotate_chess_scene.gd" id="4_ell6i"]
+
+[node name="MainMenuScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("1_ggn0m")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 0.891007, 0.453991, 0, -0.453991, 0.891007, 0.035, 10.832, 0.285)
+current = true
+fov = 63.1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" parent="UI" instance=ExtResource("1_wvhqm")]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.86, 0.545, -18.805)
+script = ExtResource("4_ell6i")
+
+[node name="ChessScene" parent="Node3D" instance=ExtResource("2_ggn0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 7)
